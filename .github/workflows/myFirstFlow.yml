@@ -1,9 +1,13 @@
-name: GerenciaConfiguracao01
-on:
-  workflow_dispatch:
+name: Hello Flow
+on: 
+  schedule: 
+    - cron: '*/5 * * * *'
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
+  first_job:
+    runs-on: 
+      ubuntu-latest
+    steps: 
+      - name: Diga Ola
+        run: echo "Hello Turma do Fundamentos de CI"
+      - name: Diga Valeu
+        run: echo "Valeu falou!" 
